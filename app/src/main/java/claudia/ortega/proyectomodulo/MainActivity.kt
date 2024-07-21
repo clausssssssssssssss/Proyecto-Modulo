@@ -22,9 +22,10 @@ class MainActivity : AppCompatActivity() {
             insets
 
         }
-        GlobalScope.launch(Dispatchers.Main){
+        GlobalScope.launch(Dispatchers.Main) {
             delay(3000)
-            startActivity(Intent(this@MainActivity,MainActivity::class.java))
+            startActivity(Intent(this@MainActivity, MainActivity::class.java))
             finish()
+        }
     }
 }

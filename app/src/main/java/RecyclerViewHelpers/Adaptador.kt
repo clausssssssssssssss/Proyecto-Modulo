@@ -16,8 +16,8 @@ class Adaptador(var Datos: List<tbPacientes>): RecyclerView.Adapter<ViewHolder>(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
        val item = Datos[position]
-        holder.txtNombreCard.text = item.nombre
-        holder.txtNombreCard.text = item.enfermedad
+        holder.textView.text = item.nombre
+        holder.textView.text = item.enfermedad
 
     }
 
