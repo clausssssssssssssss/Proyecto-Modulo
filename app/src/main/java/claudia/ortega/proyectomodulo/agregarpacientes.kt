@@ -94,6 +94,11 @@ class agregarpacientes : AppCompatActivity() {
                 addPaciente.setString(9, txtEnfermedad.text.toString())
                 addPaciente.executeUpdate()
 
+                val nuevosPacientes = obtenerPacientes()
+                withContext(Dispatchers.Main){
+                    (rcvPaciente.adapter as? Adaptador)?.actualizarLista(nuevosPacientes)
+                }
+
             }
         }
     }

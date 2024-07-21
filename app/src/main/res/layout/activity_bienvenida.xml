@@ -4,16 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3D3D3"
+    android:background="#DBCBCB"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/diamond_shape"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#611A1A"
-        android:scaleType="centerCrop"
-        android:src="@drawable/decoracion" />
 
     <TextView
         android:id="@+id/welcome_text"
@@ -39,20 +31,6 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="204dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="193dp"
-        android:layout_marginBottom="556dp"
-        app:srcCompat="@drawable/baseline_medical_information_24" />
-
-    <ImageView
         android:id="@+id/imageView5"
         android:layout_width="265dp"
         android:layout_height="191dp"
@@ -64,6 +42,20 @@
         android:layout_marginTop="521dp"
         android:layout_marginEnd="-30dp"
         android:layout_marginBottom="19dp"
+        app:srcCompat="@drawable/baseline_local_hospital_24" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="202dp"
+        android:layout_height="204dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="509dp"
         app:srcCompat="@drawable/baseline_local_hospital_24" />
 
 </RelativeLayout>
