@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:padding="8dp"
+android:background="@drawable/item_background"
+android:gravity="center_vertical">
+
+<LinearLayout
+    android:layout_width="338dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/nombreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Claudia Hernandez"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/enfermedadTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gripe"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+</LinearLayout>
+
+<ImageButton
+    android:id="@+id/updateButton"
+    android:layout_width="42dp"
+    android:layout_height="43dp"
+    android:layout_marginEnd="8dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:src="@drawable/ic_update"
+    android:tint="#800000" />
+
+<ImageButton
+    android:id="@+id/deleteButton"
+    android:layout_width="39dp"
+    android:layout_height="42dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:src="@drawable/ic_delete"
+    android:tint="#800000" />
+
+</LinearLayout>

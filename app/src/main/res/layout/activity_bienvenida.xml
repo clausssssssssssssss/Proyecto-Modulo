@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3D3D3"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/diamond_shape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#611A1A"
+        android:scaleType="centerCrop"
+        android:src="@drawable/decoracion" />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="319dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="310dp"
+        android:background="#611A1A"
+        android:fontFamily="casual"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="Bienvenido Profe y Bienvenida esposa del profe, espero les guste esta pequeña pero grandiosa aplicacion, gracias :)"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="193dp"
+        android:layout_marginBottom="556dp"
+        app:srcCompat="@drawable/baseline_medical_information_24" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="265dp"
+        android:layout_height="191dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="521dp"
+        android:layout_marginEnd="-30dp"
+        android:layout_marginBottom="19dp"
+        app:srcCompat="@drawable/baseline_local_hospital_24" />
+
+</RelativeLayout>
