@@ -128,5 +128,6 @@ class Adaptador(private var Datos: List<tbPacientes>) : RecyclerView.Adapter<Vie
                     val dialog = builder.create()
                     dialog.show()
                 }
+
        }
 }
