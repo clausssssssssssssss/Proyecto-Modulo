@@ -118,7 +118,7 @@ class Adaptador(private var Datos: List<tbPacientes>) : RecyclerView.Adapter<Vie
                     builder.setView(input)
 
                     builder.setPositiveButton("Actualizar") { dialog, which ->
-                        actualizarRegistro(input.text.toString(), item.uuid)
+                        actualizarRegistro(input.text.toString(), item.uuid, item.nombre, item.apellido, item.edad, item.enfermedad, item.habitacion_numero, item.cama_numero, item.medicamento, item.horaAplicacion)
                     }
 
                     builder.setNegativeButton("Cancelar") { dialog, which ->
