@@ -49,30 +49,30 @@ class Adaptador(private var Datos: List<tbPacientes>) : RecyclerView.Adapter<Vie
         notifyDataSetChanged()
     }
     /////////////////TODO: Editar datos////////////////////////////////
-    fun actualizarRegistro(nombre: String, uuid: String, apellido: String, edad: Int,enfermedad: String,habitacion_numero: Int,cama_numero: Int, medicamento: String, horaAplicacion: String) {
+    fun actualizarRegistro(uuid: String, nombre: String, apellido: String, edad: Int, enfermedad: String, habitacion_numero: Int, cama_numero: Int, medicamento: String, horaAplicacion: String) {
         GlobalScope.launch(Dispatchers.IO) {
             val claseC = ClaseConexion().cadenaConexion()
-            val addPaciente = claseC?.prepareStatement("UPDATE Pacientes SET nombre = ?, apellido = ?, edad = ?, enfermedad = ?, habitacion_numero = ?, cama_numero = ?, medicamento = ? WHERE uuid = ?")!!
-            addPaciente.setString(1, uuid)
-            addPaciente.setString(2, nombre)
-            addPaciente.setString(3, apellido)
-            addPaciente.setInt(4, edad)
-            addPaciente.setString(5, enfermedad)
-            addPaciente.setInt(6, habitacion_numero)
-            addPaciente.setInt(7, cama_numero)
-            addPaciente.setString(8, medicamento)
-            addPaciente.setString(9, horaAplicacion)
-            addPaciente.executeUpdate()
+            val actualizarPaciente = claseC?.prepareStatement("UPDATE Pacientes SET nombre = ?, apellido = ?, edad = ?, enfermedad = ?, habitacion_numero = ?, cama_numero = ?, medicamento = ?, horaAplicacion = ? WHERE uuid = ?")!!
+            actualizarPaciente.setString(1, nombre)
+            actualizarPaciente.setString(2, apellido)
+            actualizarPaciente.setInt(3, edad)
+            actualizarPaciente.setString(4, enfermedad)
+            actualizarPaciente.setInt(5, habitacion_numero)
+            actualizarPaciente.setInt(6, cama_numero)
+            actualizarPaciente.setString(7, medicamento)
+            actualizarPaciente.setString(8, horaAplicacion)
+            actualizarPaciente.setString(9, uuid)
+            actualizarPaciente.executeUpdate()
 
             val commit = claseC.prepareStatement("commit")!!
             commit.executeUpdate()
 
             withContext(Dispatchers.Main) {
-                actualizarItem(uuid, nombre,apellido,edad,enfermedad,habitacion_numero,cama_numero,medicamento,horaAplicacion)
+                actualizarItem(uuid, nombre, apellido, edad, enfermedad, habitacion_numero, cama_numero, medicamento, horaAplicacion)
             }
         }
     }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
     val vista = LayoutInflater.from(parent.context).inflate(R.layout.activity_item_paciente, parent, false)
     return ViewHolder(vista)
 }
@@ -118,7 +118,7 @@ class Adaptador(private var Datos: List<tbPacientes>) : RecyclerView.Adapter<Vie
                     builder.setView(input)
 
                     builder.setPositiveButton("Actualizar") { dialog, which ->
-                        actualizarRegistro(input.text.toString(), item.uuid, item.nombre, item.apellido, item.edad, item.enfermedad, item.habitacion_numero, item.cama_numero, item.medicamento, item.horaAplicacion)
+                        actualizarRegistro( item.uuid, item.nombre, item.apellido, item.edad, item.enfermedad, item.habitacion_numero, item.cama_numero, item.medicamento, item.horaAplicacion)
                     }
 
                     builder.setNegativeButton("Cancelar") { dialog, which ->

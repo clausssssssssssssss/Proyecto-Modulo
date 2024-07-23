@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         }
         GlobalScope.launch(Dispatchers.Main) {
             delay(3000)
-            startActivity(Intent(this@MainActivity, MainActivity::class.java))
+            startActivity(Intent(this@MainActivity, bienvenida::class.java))
             finish()
         }
     }
