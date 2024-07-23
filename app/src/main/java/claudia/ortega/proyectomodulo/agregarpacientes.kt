@@ -67,9 +67,9 @@ class agregarpacientes : AppCompatActivity() {
             return listPacientes
         }
         CoroutineScope(Dispatchers.IO).launch {
-            val PacientesDB = obtenerPacientes()
+            val Pacientes = obtenerPacientes()
             withContext(Dispatchers.Main){
-                val adapter = Adaptador(PacientesDB)
+                val adapter = Adaptador(Pacientes)
                 rcvPaciente.adapter = adapter
             }
         }
