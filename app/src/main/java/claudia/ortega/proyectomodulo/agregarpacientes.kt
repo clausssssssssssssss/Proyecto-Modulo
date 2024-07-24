@@ -77,13 +77,13 @@ class agregarpacientes : AppCompatActivity() {
         btnagregarpacientes.setOnClickListener{
             CoroutineScope(Dispatchers.IO).launch{
                val objconexion = ClaseConexion().cadenaConexion()
-                val addPaciente = objconexion?.prepareStatement("INSERT INTO Pacientes (nombre, apellido, edad, enfermedad, habitacion_numero, cama_numero, medicamento, horaAplicacion) values(?,?,?,?,?,?,?,?,?)")!!
+                val addPaciente = objconexion?.prepareStatement("INSERT INTO Pacientes (uuid, nombre, apellido, edad, enfermedad, habitacion_numero, cama_numero, medicamento, horaAplicacion) values(?,?,?,?,?,?,?,?,?)")!!
                 addPaciente.setString(1, UUID.randomUUID().toString())
                 addPaciente.setString(2, txtNombre.text.toString())
                 addPaciente.setString(3, txtApellidos.text.toString())
-                addPaciente.setString(4, txtEdad.text.toString().toInt().toString())
-                addPaciente.setString(5, txtHabitacion.text.toString().toInt().toString())
-                addPaciente.setString(6, txtCama.text.toString().toInt().toString())
+                addPaciente.setInt(4, txtEdad.text.toString().toInt())
+                addPaciente.setInt(5, txtHabitacion.text.toString().toInt())
+                addPaciente.setInt(6, txtCama.text.toString().toInt())
                 addPaciente.setString(7, txtMedicamentos.text.toString())
                 addPaciente.setString(8, txtAplicacion.text.toString())
                 addPaciente.setString(9, txtEnfermedad.text.toString())
