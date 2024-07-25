@@ -3,11 +3,13 @@ package RecyclerViewHelpers
 import Modelo.ClaseConexion
 import Modelo.tbPacientes
 import android.app.AlertDialog
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.recyclerview.widget.RecyclerView
 import claudia.ortega.proyectomodulo.R
+import claudia.ortega.proyectomodulo.detalles_paciente
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -129,5 +131,49 @@ override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
                     dialog.show()
                 }
 
+
+//TODO: darle clic a la card
+                holder.itemView.setOnClickListener {
+                    val context = holder.itemView.context
+                    val intent = Intent(context, detalles_paciente::class.java)
+                    intent.putExtra(
+                        "productoId",
+                        item.uuid
+                    )
+                    intent.putExtra(
+                        "nombre",
+                        item.nombre
+                    )
+                    intent.putExtra(
+                        "apellido",
+                        item.apellido
+                    )
+                    intent.putExtra(
+                        "edad",
+                        item.edad
+                    )
+                    intent.putExtra(
+                        "enfermedad",
+                        item.enfermedad
+                    )
+                    intent.putExtra(
+                        "habitacion_numero",
+                        item.habitacion_numero
+                    )
+                    intent.putExtra(
+                            "cama_numero",
+                    item.cama_numero
+                    )
+                    intent.putExtra(
+                        "medicamento",
+                        item.medicamento
+                    )
+                    intent.putExtra(
+                        "horaAplicacion",
+                        item.horaAplicacion
+                    )
+
+                    context.startActivity(intent)
+                }
        }
 }
