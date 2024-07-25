@@ -82,11 +82,12 @@ class agregarpacientes : AppCompatActivity() {
                 addPaciente.setString(2, txtNombre.text.toString())
                 addPaciente.setString(3, txtApellidos.text.toString())
                 addPaciente.setInt(4, txtEdad.text.toString().toInt())
-                addPaciente.setInt(5, txtHabitacion.text.toString().toInt())
-                addPaciente.setInt(6, txtCama.text.toString().toInt())
-                addPaciente.setString(7, txtMedicamentos.text.toString())
-                addPaciente.setString(8, txtAplicacion.text.toString())
-                addPaciente.setString(9, txtEnfermedad.text.toString())
+                addPaciente.setString(5, txtEnfermedad.text.toString())
+                addPaciente.setInt(6, txtHabitacion.text.toString().toInt())
+                addPaciente.setInt(7, txtCama.text.toString().toInt())
+                addPaciente.setString(8, txtMedicamentos.text.toString())
+                addPaciente.setString(9, txtAplicacion.text.toString())
+
                 addPaciente.executeUpdate()
 
                 val nuevosPacientes = obtenerPacientes()

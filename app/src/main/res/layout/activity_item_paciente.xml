@@ -8,14 +8,14 @@ android:background="@drawable/item_background"
 android:gravity="center_vertical">
 
     <LinearLayout
-        android:id="@+id/txtNombreCard"
+        android:id="@+id/linerlayout"
         android:layout_width="338dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/nombreTextView"
+            android:id="@+id/txtNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Claudia Hernandez"
@@ -23,13 +23,6 @@ android:gravity="center_vertical">
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/enfermedadTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gripe"
-            android:textColor="#000000"
-            android:textSize="16sp" />
     </LinearLayout>
 
 <ImageButton
