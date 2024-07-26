@@ -25,7 +25,7 @@
         android:background="#D0BDBD"
         android:text="TextView"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="75dp"
+        app:layout_constraintStart_toStartOf="@+id/txtNombreDetalle"
         tools:layout_editor_absoluteY="152dp" />
 
     <TextView
@@ -35,7 +35,7 @@
         android:background="#D0BDBD"
         android:text="TextView"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="75dp"
+        app:layout_constraintStart_toStartOf="@+id/txtApellidoDetalle"
         tools:layout_editor_absoluteY="196dp" />
 
     <TextView
@@ -45,7 +45,7 @@
         android:background="#D0BDBD"
         android:text="TextView"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="76dp"
+        app:layout_constraintStart_toStartOf="@+id/txtEdadDetalle"
         tools:layout_editor_absoluteY="247dp" />
 
     <TextView
@@ -55,7 +55,7 @@
         android:background="#D0BDBD"
         android:text="TextView"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="75dp"
+        app:layout_constraintStart_toStartOf="@+id/txtenfermedadDetalle"
         tools:layout_editor_absoluteY="288dp" />
 
     <TextView
@@ -65,7 +65,7 @@
         android:background="#D0BDBD"
         android:text="TextView"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="76dp"
+        app:layout_constraintStart_toStartOf="@+id/txthabitacion_numeroDetalle"
         tools:layout_editor_absoluteY="333dp" />
 
     <TextView
@@ -75,7 +75,7 @@
         android:background="#D0BDBD"
         android:text="TextView"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="77dp"
+        app:layout_constraintStart_toStartOf="@+id/txtcama_numeroDetalle"
         tools:layout_editor_absoluteY="381dp" />
 
     <TextView
@@ -85,7 +85,7 @@
         android:background="#D0BDBD"
         android:text="TextView"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="76dp"
+        app:layout_constraintStart_toStartOf="@+id/txtmedicamentoDetalle"
         tools:layout_editor_absoluteY="427dp" />
 
     <TextView
@@ -95,7 +95,7 @@
         android:background="#D0BDBD"
         android:text="TextView"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="75dp"
+        app:layout_constraintStart_toStartOf="@+id/txthoraAplicacionDetalle"
         tools:layout_editor_absoluteY="474dp" />
 
     <TextView

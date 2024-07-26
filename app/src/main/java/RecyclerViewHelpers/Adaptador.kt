@@ -85,7 +85,6 @@ override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             override fun onBindViewHolder(holder: ViewHolder, position: Int) {
                 val item = Datos[position]
                 holder.textView.text = item.nombre
-                holder.textView.text = item.enfermedad
 
 
             //TODO: icono de Borrar

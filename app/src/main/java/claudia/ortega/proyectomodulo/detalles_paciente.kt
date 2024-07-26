@@ -40,15 +40,6 @@ class detalles_paciente : AppCompatActivity() {
         val txtmedicamentoDetalle = findViewById<EditText>(R.id.txtmedicamentoDetalle)
         val txthoraAplicacionDetalle = findViewById<EditText>(R.id.txthoraAplicacionDetalle)
 
-        txtUUIDetalle.text = PacienteId
-        txtNombreDetalle.text = nombre
-        txtApellidoDetalle.text = apellido
-        txtEdadDetalle.text = edad
-        txtenfermedadDetalle.text = enfermedad
-        txthabitacion_numeroDetalle.text = habitacion_numero
-        txtcama_numeroDetalle.text = cama_numero
-        txtmedicamentoDetalle.text = medicamento
-        txthoraAplicacionDetalle.text = horaAplicacion
 
         }
 }
